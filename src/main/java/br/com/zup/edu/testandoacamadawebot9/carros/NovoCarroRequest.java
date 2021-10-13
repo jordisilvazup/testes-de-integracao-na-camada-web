@@ -1,5 +1,6 @@
 package br.com.zup.edu.testandoacamadawebot9.carros;
 
+import br.com.zup.edu.testandoacamadawebot9.validators.CampoDeValorUnico;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
@@ -13,6 +14,7 @@ public class NovoCarroRequest {
 
     @JsonProperty
     @NotBlank
+    @CampoDeValorUnico(campo = "placa",classeDeDominio = Carro.class)
     private String placa;
 
     @JsonProperty
